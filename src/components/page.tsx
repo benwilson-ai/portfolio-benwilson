@@ -199,11 +199,9 @@ export default function Page() {
         <div className="grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 16}>
             <div className="space-y-3">
-              <Link href="mailto:benjamin.wilson0617@gmail.com" className="inline-block">
-                <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-opacity-90 cursor-pointer">
-                  benjamin.wilson0617@gmail.com
-                </div>
-              </Link>
+              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
+                benjamin.wilson0617@gmail.com
+              </div>
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                 Get in Touch
               </h2>
