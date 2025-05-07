@@ -1,8 +1,11 @@
 FROM node:20-alpine
 WORKDIR /app
 
-# Install pnpm
-RUN npm install -g pnpm@latest
+# Install pnpm with alternative registry
+RUN npm config set registry https://registry.npmmirror.com && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 120000 && \
+    npm install -g pnpm@8.15.4
 
 # Copy package files first
 COPY package.json pnpm-lock.yaml ./
